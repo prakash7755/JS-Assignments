@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>3rd Child Of Div Tag Put Id</title>
+    <style>
+    #myList {
+        height: 70px;
+        width: 70px;
+        padding: 2px;
+        margin: 10px;
+        border: 2px solid red;
+        background-color: lightblue;
+    }
+    </style>
+</head>
+
+<body>
+</body>
+<script type="text/javascript">
+var divEm = document.createElement("DIV");
+var att = document.createAttribute("ID");
+var h2Em = document.createElement("H2");
+var text = document.createTextNode("3rd Child Of Div Tag Put Id");
+var pEm = document.createElement("P")
+var shopName = document.createTextNode("Welcom To Our Cofee Shop")
+
+h2Em.appendChild(text)
+pEm.appendChild(shopName)
+
+att.value = "div";
+divEm.setAttributeNode(att);
+document.body.appendChild(divEm);
+var getId = document.getElementById('div')
+
+getId.appendChild(h2Em);
+getId.appendChild(pEm);
+
+var ultag = document.createElement("UL");
+ultag.id = 'myList'
+document.getElementsByTagName('body')[0].appendChild(ultag);
+var a = ['Coffee', 'Milk', 'Tee', 'Boost']
+for (let i = 0; i < a.length; i++) {
+    var node = document.createElement("LI");
+    var textnode = document.createTextNode(a[i]);
+    node.appendChild(textnode);
+    document.getElementById("myList").appendChild(node);
+}
+</script>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Even String</title>
+</head>
+<body>
+<div>
+	<p id="i"> 0123456789 </p>
+</div>
+</body>
+<script type="text/javascript">
+	var check = document.getElementById('i')
+	var str = check.innerHTML;
+	for (let i=0; i<str.length; i++) {
+		var z = i % 2
+		if(z === 0) {
+			var evenCh = str.charAt(i)
+		}
+		else {
+			var oddCh = str.charAt(i);
+			document.body.appendChild(document.createTextNode(oddCh))
+
+		}
+	}
+</script>
+</html>

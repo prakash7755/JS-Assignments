@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Mail Address Validation Using Reg Exp</title>
+</head>
+
+<body>
+    <h2>Mail Address Validation Using Reg Exp</h2>
+    <form name="myForm">
+        EmailID:
+        <input id="check" type="text" name="email">
+        <button>Login</button>
+    </form>
+</body>
+<script type="text/javascript">
+var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+document.getElementById("check").addEventListener("mouseenter", mouseEnter);
+document.getElementById("check").addEventListener("mouseleave", mouseLeave);
+
+function mouseEnter() {
+    document.getElementById("check").style.color = "powderblue";
+}
+
+function mouseLeave() {
+    var mailID = document.forms["myForm"]["email"].value;
+    if (filter.test(mailID) === false) {
+    	document.getElementById("check").style.color = "red"
+    } 
+    else {
+        alert("your mailId is  : " + mailID)
+    }
+}
+</script>
+</html>

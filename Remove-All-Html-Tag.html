@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Remove All Html Tag Using Reg Exp</title>
+</head>
+<body>
+<h2>Remove All Html Tag Using Reg Exp</h2>
+</body>
+<script type="text/javascript">
+	var htmlTagRe = /<\/?[\w\s="/.':;#-\/]+>/gi
+	var list = "<div><ul><li> Water </li><li> Milk </li><li> Tee </li><li> Coffee </li></ul></div>"
+	var plainList = list.replace(htmlTagRe, "")
+	var shopList = plainList.split("  ")
+	for (i=0; i<shopList.length; i++) {
+	 var li_Element = document.createElement("LI");
+            var textnode = document.createTextNode(shopList[i]);
+            li_Element.appendChild(textnode);
+            document.body.appendChild(li_Element);
+	}
+
+</script>
+</html>
