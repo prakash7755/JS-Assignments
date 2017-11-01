@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>3rd Child Of Div Tag</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+<body>
+	<h2>3rd Child Of Div Tag</h2>
+	<div>
+		<p>This 1st Line</p>
+		<p>This 2nd Line</p>
+		<p>This 3rd Line</p>
+	</div>
+</body>
+<script type="text/javascript">
+	'use strict'
+	$(document).ready(function(){
+          $("div p:eq(2)")	.css("background-color","yellow");
+	})
+</script>
+</html>

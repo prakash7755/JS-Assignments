@@ -1,19 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>Graterthan 3rd Row Show In Red Color </title>
-	<style>
-    .color {
-        color: red;
-    }
-    </style>
-
-</head>s
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
 <body>
+
 <h1>Welcome to My Web Page</h1>
 
-<table border="1" id="myTable">
+<table border="1">
   <tr>
     <th>Company</th>
     <th>Country</th>
@@ -42,12 +36,9 @@
 
 </body>
 <script type="text/javascript">
-	var rows = document.getElementById('myTable').getElementsByTagName('tr');
-for(var x = 0; x < rows.length; x++) {
-    rows[x].className = (x >= 3) ? 'color' : 'noColor';
-    console.log(rows[x].className)
-
-}
-
-	</script>
-</html> 
+$(document).ready(function(){
+   $("table tr:eq(3)").css("background-color","yellow");
+});
+</script>
+</script>
+</html>

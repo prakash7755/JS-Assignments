@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> Table 6th Column's Show In Red Color </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+<body>
+<h1>Employee Details</h1>
+
+<table border="1">
+  <tr>
+    <th>Emp Name</th>
+    <th>Country</th>
+    <th>Age</th>
+    <th>Exp</th>
+    <th>State</th>
+    <th>Salary</th>
+  </tr>
+  <tr>
+    <td>Prakash</td>
+    <td>India</td>
+    <td>25</td>
+    <td>2</td>
+    <td>TamilNadu</td>
+    <td>30000</td>
+
+  </tr>
+  <tr>
+    <td>Udhaya</td>
+    <td>India</td>
+    <td>29</td>
+    <td>3</td>
+    <td>TamilNadu</td>
+    <td>40000</td>  </tr>
+  <tr>
+    <td>Siva</td>
+    <td>India</td>
+    <td>32</td>
+    <td>10</td>
+    <td>TamilNadu</td>
+    <td>500000</td>  </tr>
+  <tr>
+    <td>Murali</td>
+    <td>India</td>
+    <td>24</td>
+    <td>2</td>
+    <td>TamilNadu</td>
+    <td>60000</td>  </tr>
+  <tr>
+    <td>Madhu</td>
+    <td>India</td>
+    <td>35</td>
+    <td>12</td>
+    <td>TamilNadu</td>
+    <td>700000</td>  </tr>
+</table>
+<h2></h2>
+<h2></h2>
+<h3></h3>
+</body>
+<script type="text/javascript">
+   $(document).ready(function(){
+    var rowCount = $('tr').length;
+    var ColumnCount = $('td').length + 6;
+    $("h2").text("Number Of Rows : " + rowCount)
+    $("h2:nth-child(3)").text("Number Of Columns : "+ ColumnCount)
+
+   })
+	</script>
+</html>   
